@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>موقع الطبخ</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            direction: rtl;
+            text-align: right;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        header {
+            background-color: #f8b400;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #ff704d;
+            padding: 10px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            cursor: pointer;
+        }
+        #main-content {
+            display: flex;
+            flex-direction: row;
+            margin: 20px;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #ff704d;
+            padding: 10px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>موقع الطبخ</h1>
+    </header>
+    <nav>
+        <a href="index.html" onclick="loadPage('home.html')">الرئيسية</a>
+        <a href="حلويات.html" onclick="loadPage('desserts.html')">حلويات</a>
+        <a href="طبخ.html" onclick="loadPage('cooking.html')">طبخ</a>
+        <a href="عصائر.html" onclick="loadPage('juices.html')">عصائر</a>
+    </nav>
+  
+
+    <script>
+        function loadPage(page) {
+            document.getElementById('content-frame').src = page;
+        }
+    </script>
+</body>
+</html>

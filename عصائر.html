@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عصائر</title>
+    <meta name="descripe" content="عصائر , بمناسبه اننا فى موسم الفراوله هنعمل ميلكتشيك خطيييير">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            direction: rtl;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        header {
+            background-color: #f8b400;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #ff704d;
+            padding: 10px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            cursor: pointer;
+        }
+        #main-content {
+            display: flex;
+            flex-direction: row;
+            margin: 20px;
+        }
+        #sidebar {
+            width: 200px;
+            background-color: #f0f0f0;
+            padding: 15px;
+        }
+        iframe {
+            flex-grow: 1;
+            height: 300px;
+            border: 1px solid #ddd;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-left: 20px;
+            background-color: #ffffff;
+            width: 400px;
+        }
+        .share-button {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: blue;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+       
+    </style>
+</head>
+<body>
+    <header>
+        <h1>موقع مطبخ العيله</h1>
+        <button class="share-button" onclick="shareContent()">مشاركة</button>
+    </header>
+    <nav>
+        <a href="حلويات.html" onclick="loadPage('حلويات.html')">حلويات</a>
+        <a href="index.html" onclick="loadPage('index.html')">طبخ</a>
+        <a href="عصائر.html" onclick="loadPage('عصائر.html')">عصائر</a>
+    </nav>
+    <h1>وصفات العصائر</h1>
+    <iframe src="https://www.youtube.com/embed/EjqShBtVROg?si=06saCnDP6LKaNbOp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+    <script>
+        function shareContent() {
+            const shareData = {
+                title: 'موقع مطبخ العيله',
+                text: 'تعرف على أفضل وصفات العصائر من موقع مطبخ العيله!',
+                url: 'https://kitchen-zeta.vercel.app/%D8%B9%D8%B5%D8%A7%D8%A6%D8%B1.html'  // ضع الرابط الذي ترغب في مشاركته هنا
+            };
+
+            if (navigator.share) {
+                navigator.share(shareData).then(() => {
+                    console.log('Successful share');
+                }).catch((error) => {
+                    console.error('Error sharing:', error);
+                });
+            } else {
+                alert('المشاركة غير مدعومة في هذا المتصفح');
+            }
+        }
+    </script>
+</body>
+</html>
