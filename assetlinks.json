@@ -1,0 +1,11 @@
+[
+    {
+      "relation": ["delegate_permission/common.handle_all_urls"],
+      "target": {
+        "namespace": "android_app",
+        "package_name": "com.mobeasyapp.app692109360976",
+        "sha256_cert_fingerprints":
+          ["86:65:AD:36:4D:D4:7F:B0:75:44:D7:B9:42:F3:E4:E1:0D:1B:A8:BD:35:B0:46:E2:13:A9:9D:B8:DF:97:62:B5"]
+      }
+    }
+  ]
